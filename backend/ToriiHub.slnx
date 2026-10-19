@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/deploy/">
+    <File Path="Caddyfile" />
+    <File Path="docker-compose.yml" />
+    <File Path="Dockerfile" />
+    <File Path="turnserver.conf" />
+  </Folder>
+  <Project Path="../frontend/frontend.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ToriiHub.Api/ToriiHub.Api.csproj" />
+</Solution>

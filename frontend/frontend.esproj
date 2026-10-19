@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.89-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <!-- Указываем Visual Studio, что перед билдом решения нужно вызывать npm run build -->
+    <ShouldRunBuildScript>true</ShouldRunBuildScript>
+    <BuildCommand>npm run build</BuildCommand>
+    <!-- Папка, куда Vite собирает production-файлы -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+  </PropertyGroup>
+</Project>

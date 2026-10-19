@@ -1,0 +1,20 @@
+{
+    email admin@example.com
+}
+
+toriihub.example.com {
+    encode zstd gzip
+
+    log {
+        output file /var/log/caddy/toriihub.log {
+            roll_size 10mb
+            roll_keep 5
+        }
+    }
+
+    reverse_proxy app:8080 {
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}
